@@ -29,6 +29,7 @@ module Decidim
             I18n.t("stats", scope: "decidim.processes_admin_stats.admin.menu.participatory_processes_submenu"),
             decidim_processes_admin_stats_admin.participatory_process_stats_path(current_participatory_space),
             active: is_active_link?(decidim_processes_admin_stats_admin.participatory_process_stats_path(current_participatory_space)),
+            icon_name: "line-chart-line",
             if: allowed_to?(:read, :component)
         end
       end
