@@ -1,0 +1,24 @@
+---
+es:
+  decidim:
+    processes_admin_stats:
+      admin:
+        menu:
+          participatory_processes_submenu:
+            stats: Estadísticas
+        participatory_process_stats:
+          index:
+            stats_title: Estadísticas del proceso
+            updated_at: Actualizado el %{timestamp}
+      stats:
+        participatory_processes:
+          total_registered: Usuarios registrados
+          total_verified: Usuarios verificados
+          total_votes: Votos
+          active_users: Usuario activos en el proceso
+          voting_users: Usuario que han votado
+          not_voting_users: Usuario que no han votado
+          metric: Métrica
+          value: Valor
+          total_percentage: "% de usuario totales"
+          active_percentage: "% de usuarios activos"

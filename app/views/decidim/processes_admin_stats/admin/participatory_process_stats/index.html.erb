@@ -1,0 +1,25 @@
+<div class="card" id="stats">
+  <div class="card-divider">
+    <h2 class="card-title">
+      <%= t("participatory_process_stats.index.stats_title", scope: "decidim.processes_admin_stats.admin") %>
+    </h2>
+  </div>
+
+  <div class="card-section">
+    <div class="table-scroll">
+      <table class="table-list">
+        <thead>
+          <%= @process_stats.headers %>
+        </thead>
+
+        <tbody>
+          <%= @process_stats.values %>
+        </tbody>
+      </table>
+
+      <p>
+        <i><%= t("participatory_process_stats.index.updated_at", scope: "decidim.processes_admin_stats.admin", timestamp: l(Time.zone.yesterday.end_of_day, format: :decidim_short)) %></i>
+      </p>
+    </div>
+  </div>
+</div>
