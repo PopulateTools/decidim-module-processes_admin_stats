@@ -28,7 +28,7 @@ module Decidim
         def values
           safe_join(
             process_stats.map do |stat|
-              ParticipatoryProcessStatPresenter.new(stat).present
+              Admin::ParticipatoryProcessStatPresenter.new(stat).present
             end
           )
         end
@@ -36,7 +36,7 @@ module Decidim
         private
 
         def process_stats
-          ParticipationStats.new(participatory_process).stats
+          Admin::ParticipationStats.new(participatory_process).stats
         end
 
         def stats_headers
