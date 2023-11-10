@@ -4,8 +4,16 @@ module Decidim
   module ProcessesAdminStats
     module Admin
       # A presenter to render statistics in the process admin page.
-      class ParticipatoryProcessStatsPresenter < Rectify::Presenter
-        attribute :participatory_process, Decidim::ParticipatoryProcess
+      class ParticipatoryProcessStatsPresenter < SimpleDelegator
+        delegate :content_tag, :safe_join, to: :view_context
+
+        def view_context
+          @view_context ||= __getobj__.fetch(:view_context, ActionController::Base.new.view_context)
+        end
+
+        def participatory_process
+          __getobj__.fetch(:participatory_process)
+        end
 
         def headers
           content_tag(:tr) do

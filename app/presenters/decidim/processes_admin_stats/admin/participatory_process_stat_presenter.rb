@@ -3,11 +3,18 @@
 module Decidim
   module ProcessesAdminStats
     module Admin
-      class ParticipatoryProcessStatPresenter < Rectify::Presenter
-        attribute :name, String
-        attribute :count, Integer
-        attribute :percentage, Integer
-        attribute :relative_percentage, Integer
+      class ParticipatoryProcessStatPresenter < SimpleDelegator
+        delegate :content_tag, :safe_join, :number_with_delimiter, to: :view_context
+
+        def view_context
+          @view_context ||= __getobj__.fetch(:view_context, ActionController::Base.new.view_context)
+        end
+
+        %i[name count percentage relative_percentage].each do |attr|
+          define_method attr do
+            __getobj__.fetch(attr, nil)
+          end
+        end
 
         def present
           content_tag(:tr, id: "process-stat-#{name}") do
