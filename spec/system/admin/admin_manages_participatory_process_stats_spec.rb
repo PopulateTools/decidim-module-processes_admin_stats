@@ -3,11 +3,11 @@
 require "spec_helper"
 
 describe "Admin manages participatory process stats", type: :system do
-  let!(:user) do
-    create(:user, :admin, :confirmed, organization: organization)
-  end
   let(:organization) { create(:organization) }
-  let!(:participatory_process) { create(:participatory_process, organization: organization) }
+  let!(:user) do
+    create(:user, :admin, :confirmed, organization:)
+  end
+  let!(:participatory_process) { create(:participatory_process, organization:) }
 
   let(:active) { false }
   let(:total_users) { 100 }
