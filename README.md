@@ -3,7 +3,7 @@
 A Decidim module to include statistics of participatory processes in their admin panel.
 
 ## Usage
-After [installing](#installation) this module a new item in the admin menu of each participatory process is created which links to a table with stats of the process
+After [installing](#installation) this module a new item in the admin menu of each participatory process is created. This item links to a table with stats of the process:
 
 #### Decidim 0.26
 
