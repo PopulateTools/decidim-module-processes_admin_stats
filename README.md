@@ -5,7 +5,13 @@ A Decidim module to include statistics of participatory processes in their admin
 ## Usage
 After [installing](#installation) this module a new item in the admin menu of each participatory process is created which links to a table with stats of the process
 
-![Admin participatory process screenshot](https://github.com/PopulateTools/decidim-module-processes_admin_stats/assets/446459/6c113e8f-3588-49eb-a433-c090fbee5892)
+#### Decidim 0.26
+
+![Admin participatory process screenshot 0.26](https://github.com/PopulateTools/decidim-module-processes_admin_stats/assets/446459/80b81783-6a89-468f-b00c-b7065fda9659)
+
+#### Decidim 0.28
+
+![Admin participatory process screenshot 0.28](https://github.com/PopulateTools/decidim-module-processes_admin_stats/assets/446459/6c113e8f-3588-49eb-a433-c090fbee5892)
 
 ## Installation
 
